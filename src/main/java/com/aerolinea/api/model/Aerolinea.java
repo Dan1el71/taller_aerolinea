@@ -16,11 +16,11 @@ import java.util.Set;
 public class Aerolinea {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id_aerolinea;
+    private Long idAerolinea;
 
-    private String nombre;
-    private Long codigo_aerolinea;
-    private String pais_origne;
+    private String nombreAerolinea;
+    private Long codigoAerolinea;
+    private String paisOrigen;
 
     @OneToMany(mappedBy = "aerolinea")
     Set<Vuelo> vuelos;

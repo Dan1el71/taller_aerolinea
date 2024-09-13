@@ -16,14 +16,14 @@ import java.util.Set;
 public class Aeropuerto {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id_aeropuerto;
-    private String nombre;
-    private String ciudad;
-    private String pais;
+    private Long idAeropuerto;
+    private String nombreAeropuerto;
+    private String ciudadAeropuerto;
+    private String paisAeropuerto;
 
-    @OneToMany(mappedBy = "aeropuerto_origen")
-    Set<Vuelo> vuelos_origen;
+    @OneToMany(mappedBy = "aeropuertoOrigen")
+    Set<Vuelo> vuelosOrigen;
 
-    @OneToMany(mappedBy = "aeropuerto_destino")
-    Set<Vuelo> vuelos_destino;
+    @OneToMany(mappedBy = "aeropuertoDestino")
+    Set<Vuelo> vuelosDestino;
 }

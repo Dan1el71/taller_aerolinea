@@ -14,10 +14,10 @@ import lombok.NoArgsConstructor;
 public class Pasajero {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id_pasajero;
+    private Long idPasajero;
 
-    String nombre_pasajero;
-    String apellido_pasajero;
+    String nombrePasajero;
+    String apellidoPasajero;
 
     @ManyToOne
     @JoinColumn(name = "id_reserva")

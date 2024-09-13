@@ -14,14 +14,14 @@ import lombok.NoArgsConstructor;
 public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Long id;
+    Long idCliente;
 
-    String nombre;
-    String apellido;
-    String direccion;
-    String telefono;
-    String correo;
+    String nombreCliente;
+    String apellidoCliente;
+    String direccionCliente;
+    String telefonoCliente;
+    String correoCliente;
 
-    @OneToOne(mappedBy = "id_cliente")
+    @OneToOne(mappedBy = "idCliente")
     Reserva reserva;
 }

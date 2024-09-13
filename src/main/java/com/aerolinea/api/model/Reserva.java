@@ -17,15 +17,15 @@ import java.util.Set;
 public class Reserva {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id_reserva;
+    private Long idReserva;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_cliente")
-    private Cliente id_cliente;
+    private Cliente idCliente;
 
-    private Long id_vuelo;
-    private Date fecha_reserva;
-    private Short numero_pasajeros;
+    private Long idVuelo;
+    private Date fechaReserva;
+    private Short numeroPasajeros;
 
     @OneToMany(mappedBy = "reserva")
     private Set<Pasajero> pasajeros;

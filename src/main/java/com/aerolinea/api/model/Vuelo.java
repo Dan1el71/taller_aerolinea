@@ -20,18 +20,18 @@ public class Vuelo {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id_vuelo;
 
-    private Date fecha_salida;
-    private LocalDateTime hora_salida;
+    private Date fechaSalida;
+    private LocalDateTime horaSalida;
     private Short duracion;
     private Short capacidad;
 
     @ManyToOne
     @JoinColumn(name = "id_aeropuerto_origen")
-    private Aeropuerto aeropuerto_origen;
+    private Aeropuerto aeropuertoOrigen;
 
     @ManyToOne
     @JoinColumn(name = "id_aeropuerto_destino")
-    private Aeropuerto aeropuerto_destino;
+    private Aeropuerto aeropuertoDestino;
 
     @ManyToOne
     @JoinColumn(name = "id_aerolinea")
